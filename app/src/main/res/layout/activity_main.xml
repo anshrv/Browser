@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#888888"
+    tools:context=".MainActivity">
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/rounder_corner_view"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="Введите запрос"
+        android:textColorHint="#B5CFCFCF"
+        android:paddingLeft="10dp"
+        android:textColor="#B5CFCFCF"
+        app:layout_constraintBottom_toTopOf="@+id/WebView"
+        app:layout_constraintEnd_toStartOf="@+id/goBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/goBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#FF505050"
+        android:src="@android:drawable/ic_menu_search"
+        app:layout_constraintBottom_toTopOf="@+id/WebView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444"
+        tools:ignore="OnClick"
+        tools:src="@android:drawable/ic_menu_search" />
+
+    <WebView
+        android:id="@+id/WebView"
+        android:layout_width="match_parent"
+        android:layout_height="671dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView">
+
+    </WebView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
